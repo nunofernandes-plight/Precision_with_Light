@@ -49,13 +49,13 @@ const Technology = () => {
   ];
 
   return (
-    <section id="technology" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="technology" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/20 transition-colors duration-200">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
             Advanced Technology Stack
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-200">
             Our cutting-edge technology foundation enables us to deliver high-performance, 
             scalable solutions for the most demanding photonics applications.
           </p>
@@ -65,17 +65,17 @@ const Technology = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6">
                 <tech.icon className="w-6 h-6 text-white" />
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-200">
                 {tech.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-200">
                 {tech.description}
               </p>
               
@@ -83,7 +83,7 @@ const Technology = () => {
                 {tech.tools.map((tool, toolIndex) => (
                   <div
                     key={toolIndex}
-                    className="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium text-center"
+                    className="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-lg text-sm font-medium text-center transition-colors duration-200"
                   >
                     {tool}
                   </div>
@@ -93,18 +93,18 @@ const Technology = () => {
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 transition-colors duration-200">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-12 transition-colors duration-200">
             Performance Metrics
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 transition-colors duration-200">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-gray-600 dark:text-gray-400 font-medium transition-colors duration-200">
                   {stat.label}
                 </div>
               </div>

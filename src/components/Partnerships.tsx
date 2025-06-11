@@ -53,13 +53,13 @@ const Partnerships = () => {
   ];
 
   return (
-    <section id="partnerships" className="py-20 bg-white">
+    <section id="partnerships" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
             Strategic Partnerships
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-200">
             We believe in the power of collaboration. Our partnership approach creates 
             synergistic relationships that drive innovation and deliver exceptional value to all stakeholders.
           </p>
@@ -69,24 +69,24 @@ const Partnerships = () => {
           {partnershipTypes.map((partnership, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-100"
+              className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 transition-colors duration-200"
             >
               <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center mb-6">
                 <partnership.icon className="w-7 h-7 text-white" />
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
                 {partnership.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-200">
                 {partnership.description}
               </p>
               
               <ul className="space-y-3">
                 {partnership.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                  <li key={benefitIndex} className="flex items-center text-gray-700 dark:text-gray-300 transition-colors duration-200">
+                    <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 flex-shrink-0 transition-colors duration-200" />
                     <span>{benefit}</span>
                   </li>
                 ))}
@@ -95,8 +95,8 @@ const Partnerships = () => {
           ))}
         </div>
 
-        <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12 mb-16 transition-colors duration-200">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-12 transition-colors duration-200">
             Partnership Process
           </h3>
           
@@ -107,16 +107,16 @@ const Partnerships = () => {
                   <span className="text-white text-xl font-bold">{process.step}</span>
                 </div>
                 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">
+                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-200">
                   {process.title}
                 </h4>
                 
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm transition-colors duration-200">
                   {process.description}
                 </p>
                 
                 {index < partnershipProcess.length - 1 && (
-                  <ArrowRight className="hidden md:block w-6 h-6 text-gray-400 absolute top-8 -right-4 transform translate-x-1/2" />
+                  <ArrowRight className="hidden md:block w-6 h-6 text-gray-400 dark:text-gray-500 absolute top-8 -right-4 transform translate-x-1/2 transition-colors duration-200" />
                 )}
               </div>
             ))}
